@@ -26,7 +26,7 @@
     <xacro:arg name="use_external_cable" default="false" />
 
 
-    <xacro:include filename="/home/arcs-arms/magic/ros2_ws/src/ros2_kortex/kortex_description/robots/kortex_robot.xacro" />
+    <xacro:include filename="/root/moveit_ws/src/moveit2-three-arm-setup/kortex_robot.xacro" />
 
     <!-- Material definitions -->
     <material name="dark_blue_metal">
@@ -42,7 +42,7 @@
     </material>
 
     <!-- Initial positions from the YAML file -->
-    <xacro:property name="initial_positions_file" default="../config/initial_positions.yaml"/>
+    <xacro:property name="initial_positions_file" default="/root/moveit_ws/src/moveit2-three-arm-setup/initial_positions.yaml"/>
 
     <!-- World link -->
     <link name="world">
@@ -67,14 +67,14 @@
     <visual>
         <origin rpy="1.5708 0 0" xyz="0 0 0"/>
         <geometry>
-        <mesh filename="file:///../../control/kinova_gen3_mujoco/assets/VentionAssembly.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:///root/moveit_ws/src/moveit2-three-arm-setup/VentionAssembly.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="dark_blue_metal"/>
     </visual>
     <collision>
         <origin rpy="1.5708 0 0" xyz="0 0 0"/>
         <geometry>
-        <mesh filename="file:///../../control/kinova_gen3_mujoco/assets/VentionAssembly.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="file:///root/moveit_ws/src/moveit2-three-arm-setup/VentionAssembly.stl" scale="0.001 0.001 0.001"/>
         </geometry>
     </collision>
     <inertial>
